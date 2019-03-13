@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE>JAVASCRIPT</TITLE>
+<script>
+
+function main()
+{
+
+	function func1(a,b) //Parameter correspondence
+	{
+ 		var result = a - b;
+		alert("In func1 result: " + result );
+	}
+
+
+	func1(10,5); //Positional
+	func1(b=10,a=5); //Keyword
+
+	function func2(a=10,b=5) //Default values
+	{
+		var result = a-b;
+		alert("In func2 result: " + result);
+	}
+	func2();
+	func2(12);
+
+	function func3(x) //Pass by value
+	{
+	   x = 10;
+	   alert("In func3 x:" + x );
+	}
+
+	var x = 3;
+	func3(x);
+	alert("After func3 call, x:" + x);
+
+	function func4(x) //Pass By Reference
+        {
+        	x[2]++;
+		alert("In func4 x[2]: " + x[2]);
+        }
+        
+        x = [1,2,3,4]
+        func4(x);
+        alert("After func4 call, x[2]: " + x[2]);
+
+}
+</script>
+</HEAD>
+
+<BODY>
+
+<form name="buttons" method="post" onSubmit="return false">
+Click execute to see outputs related to subprograms in Javascript
+<input type="button" name="execute" value="execute" onClick="main()">
+
+</form>
+
+</BODY>
+</HTML>
+
